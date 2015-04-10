@@ -72,12 +72,12 @@
                 <encoding>false</encoding>
                 <assertions>true</assertions>
                 <subresults>true</subresults>
-                <responseData>false</responseData>
-                <samplerData>false</samplerData>
-                <xml>false</xml>
+                <responseData>true</responseData>
+                <samplerData>true</samplerData>
+                <xml>true</xml>
                 <fieldNames>false</fieldNames>
                 <responseHeaders>false</responseHeaders>
-                <requestHeaders>false</requestHeaders>
+                <requestHeaders>true</requestHeaders>
                 <responseDataOnError>false</responseDataOnError>
                 <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
                 <assertionsResultsToSave>0</assertionsResultsToSave>
