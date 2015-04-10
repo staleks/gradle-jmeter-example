@@ -1,0 +1,35 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath "com.github.kulya:jmeter-gradle-plugin:1.3.4-2.13"
+	}
+}
+
+apply plugin: 'jmeter'
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.8
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+	maven {
+		url "https://oss.sonatype.org/content/groups/public"
+	}
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
+
+jmeterRun.configure {
+	jmeterTestFiles = [file("src/test/jmeter/google-homepage.jmx")]
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
